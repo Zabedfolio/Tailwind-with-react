@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from './Link';
+import { CircleX, Menu } from 'lucide-react';
+
 
 const navItems = [
     {
@@ -30,28 +32,33 @@ const navItems = [
 ];
 
 const Navbar = () => {
-    return (
-        <nav>
-            {/* <ul className='flex'>
-                <li className='mr-10'><a href="/">Home</a></li>
-                <li className='mr-10'><a href="/">About</a></li>
-                <li className='mr-10'><a href="/">Blog</a></li>
-            </ul> */}
 
-            <ul className='flex'>
+    const [open, setOpen] = useState(false);
+    const links= navItems.map(route => <Link key={navItems.id} route={route}></Link>)
+
+    return (
+        <nav className='flex justify-between mx-6 mt-5 mb-10'>
+            <span className='flex' onClick={()=> setOpen(!open)}>
+                {open ? <CircleX className='md:hidden'></CircleX>:<Menu className='md:hidden'></Menu>}
+                <ul className={`md:hidden absolute duration-1000 bg-gray-800 rounded-md
+                    ${open ? 'top-15':'-top-55'}
+                    `}>
+                    {links}
+                </ul>
+                
+
+                <h3 className='ml-4'>My NavBar</h3>
+            </span>
+
+            <ul className='md:flex hidden'>
                 {
-                    navItems.map(route => <Link key={navItems.id} route={route}></Link>
-                    )
+                    links
                 }
             </ul>
 
-            {/* <ul className='flex'>
-                {
-                    navItems.map(route => <li className='mr-10'>
-                        <a href={route.path}>{route.name}</a>
-                        </li>)
-                }
-            </ul> */}
+            <button>Sign In</button>
+
+
         </nav>
     );
 };

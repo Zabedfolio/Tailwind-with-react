@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Basic Plan",
+        "price": "$19.99/month",
+        "description": "Perfect for beginners starting their fitness journey.",
+        "features": [
+            "Access to gym equipment",
+            "Locker facility",
+            "1 free fitness assessment",
+            "Access during off-peak hours",
+            "Basic cardio machines",
+            "Changing room access",
+            "Water station access",
+            "Mobile app workout tracking (basic)"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Premium Plan",
+        "price": "$69.99/month",
+        "popular": true,
+        "description": "Best for serious fitness enthusiasts.",
+        "features": [
+            "Full gym access (24/7)",
+            "Personal trainer (2 sessions/week)",
+            "Custom workout plan",
+            "Advanced nutrition plan",
+            "Priority support",
+            "Access to all group classes (Yoga, HIIT, Zumba)",
+            "Locker & shower facility",
+            "Body composition analysis",
+            "Sauna & steam room access",
+            "Mobile app with progress tracking",
+            "Guest pass (2 per month)"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Family Plan",
+        "price": "$149.99/month",
+        "description": "Ideal for families who want to stay fit together.",
+        "features": [
+            "Access for up to 4 members",
+            "All Premium features included",
+            "Family training sessions",
+            "Personalized diet plans for each member",
+            "Kids fitness zone access",
+            "Flexible timing for all members",
+            "Dedicated family locker room",
+            "Monthly family fitness report",
+            "Discount on additional members",
+            "Free fitness workshops & events",
+            "Priority booking for classes",
+            "4 guest passes per month"
+        ]
+    }
+]
